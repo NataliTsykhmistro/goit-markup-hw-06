@@ -416,6 +416,68 @@ ul {
     fill: var(--logo-accent-color);
 }
 
+/* форма, разметка в модал.окне */
+.form-ad {
+    max-width: 528px;
+    margin: 0px;
+    padding: 40px;
+}
+
+.modal-title {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.form-modal {
+display: flex;
+flex-direction: column;
+}
+
+.form-modal:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.form-modal label {
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
+
+.form-modal input {
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+
+.form-checkbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
 /* секции */
 
 .section {
@@ -991,13 +1053,12 @@ img {
 }
 
 .form {
-    width: 570px; 
-    outline: 1px solid red;  
+width: 570px;
+
 }
 
 .form-field {
     display: flex;
-    
 }
 
 .form-input{
@@ -1037,5 +1098,5 @@ img {
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer; 
-      
+
 }
