@@ -459,16 +459,18 @@ ul {
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    background-color: var(--title-text-color);
 }
 
 .modal-input:focus {
-    border: 1px solid var(--accent-color);
+    outline: 1px solid var(--accent-color);
+    border: none;
     cursor: pointer;
 }
 
 .modal-input:focus ~ .form-svg {
-    cursor: pointer;
     fill: var(--accent-color);
+    cursor: pointer;
 }
 
 .form-svg {
