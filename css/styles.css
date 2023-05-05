@@ -372,7 +372,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* padding: 8px; */
+    padding: 40px;
 
     width: 528px;
     height: 581px;
@@ -407,8 +407,9 @@ ul {
     background-color: var(--primary-bg-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-
+    
     cursor: pointer;
+    
 }
 
 .modal-svg {
@@ -417,18 +418,17 @@ ul {
     transition: fill 250ms var(--timing-function);
 }
 
-.modal-svg:hover,
-.modal-svg:focus {
+.modal-button:hover .modal-svg,
+.modal-button:focus .modal-svg {
     fill: var(--accent-color);
     cursor: pointer;
 }
 
 /* форма, разметка в модал.окне */
 .form-ad {
-    width: 528px;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px;
+    
 }
 
 .modal-title {
@@ -515,33 +515,47 @@ textarea::placeholder {
 }
 
 .form-checkbox {
+    position: relative;
     display: block;
     margin-top: 20px;
     margin-bottom: 30px;
     text-align: center;
+    
 }
 
 .form-checkbox label {
     color: var(--secondary-text-color);
     font-weight: 400;
     line-height: 1.71;
+    margin-left: 8px;
+    
 }
 
 .checkbox {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none; */
     position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .form-icon {
+    position: absolute;
     display: inline-block;
     width: 16px;
     height: 15px;
-    margin-right: 7px;
+    left: 12px;
     background-color: var(--primary-bg-color);
     border: 2px solid var(--primary-text-color);
     border-radius: 2px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .checkbox:checked + .form-icon {
@@ -552,7 +566,10 @@ textarea::placeholder {
     background-repeat: no-repeat;
     background-position: center;
     border-color: var(--accent-color);
-    
+}
+
+.checkbox:focus + .form-icon {
+    border: 2px solid var(--accent-color);
 }
 
 .form-link {
@@ -1035,6 +1052,7 @@ img {
 }
 
 .footer-all {
+    width: 231px;
     display: flex;
     align-items: baseline;
     flex-direction: column;
@@ -1165,10 +1183,12 @@ width: 570px;
 
 .form-field {
     display: flex;
+    
 }
 
 .form-input{
     background-color: #2F303A;
+    color: #FFFFFF;
     margin-right: 12px;
     width: 358px;
     height: 50px;
